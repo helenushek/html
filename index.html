@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Зачётная страничка</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            text-align: center;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        img {
+            margin-top: 20px;
+            max-width: 100%;
+            border-radius: 10px;
+            display: none;
+        }
+        #instruction {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>С наступающим Новым Годом!</h1>
+        <p id="instruction">Нажми на кнопку, чтобы увидеть котика.</p>
+        <button id="catButton" onclick="showCat()">Нажми, чтобы увидеть котика</button>
+        <img id="catImage" src="https://i.ibb.co/0rtNvyh/22-12-2024-180133.jpg" alt="22-12-2024-180133">
+    </div>
+    <script>
+        function showCat() {
+            const catImage = document.getElementById('catImage');
+            const catButton = document.getElementById('catButton');
+            const instruction = document.getElementById('instruction');
+
+            catImage.style.display = 'block';
+            catButton.style.display = 'none';
+            instruction.style.display = 'none';
+        }
+    </script>
+</body>
+</html>
